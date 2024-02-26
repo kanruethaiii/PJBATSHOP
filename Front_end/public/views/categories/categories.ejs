@@ -14,16 +14,14 @@
           <th>Action</th>
         </tr>
         
-        <% for (var i = 0; i < categories.length; i++) { %>
         <tr>
-            <td><%= categories[i].category_id %></td>
-            <td><%= categories[i].category_name %></td>
+            <td><%= categories.category_id %></td>
+            <td><%= categories.category_name %></td>
             <td>
-                <a href="http://localhost:5500/categories/update/<%= categories[i].category_id %>">Edit</a>
-                <a href="http://localhost:5500/categories/delete/<%= categories[i].category_id %>">Delete</a>
+                <a href="http://localhost:5500/categories/update/<%= categories.category_id %>">Edit</a>
+                <a href="http://localhost:5500/categories/delete/<%= categories.category_id %>">Delete</a>
             </td>
         </tr>
-        <% } %> 
     </table>
     <a href="http://localhost:5500/categories">Back</a>
 </body>
