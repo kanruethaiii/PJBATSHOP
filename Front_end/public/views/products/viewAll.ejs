@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<table>
+    <tr>
+      <th>product_id</th>
+      <th>product_code</th>
+      <th>product_name</th>
+      <th>category_id</th>
+      <th>unit</th>
+      <th>price</th>
+      <th>Action</th>
+      </tr>
+    <% for(var i = 0; i < product.length; i++) { %>
+        <tr>
+          <td><%= product[i].product_id  %></td>
+          <td><%= product[i].product_code  %></td>
+          <td><%= product[i].product_name  %></td>
+          <td><%= product[i].category_id  %></td>
+          <td><%= product[i].unit  %></td>
+          <td><%= product[i].price  %></td>
+          <td>
+              <a href="http://localhost:5500/product/<%= product[i].product_id %>">View</a>
+              <a href="http://localhost:5500/product/update/<%= product[i].product_id %>">Edit</a>
+              <a href="http://localhost:5500/product/delete/<%= product[i].product_id %>">Delete</a>
+          </td>
+        </tr>
+    <% } %> 
+</table>
+<a href="http://localhost:5500/product/create">Create</a>
+</body>
+</html>

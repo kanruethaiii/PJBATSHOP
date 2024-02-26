@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <h1>UPDATE Categories</h1>
+    <form method="post" action="/categories/update/<%= categories.category_id %>">
+        <label for="category_id">Categories ID:</label>
+        <input type="text" id="category_id" name="category_id" value="<%= categories.category_id %>">
+
+        <label for="category_name">Categories NAME:</label>
+        <input type="text" id="category_name" name="category_name" value="<%= categories.category_name %>">
+
+
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

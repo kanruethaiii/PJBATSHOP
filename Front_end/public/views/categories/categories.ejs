@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <table>
+        <tr>
+          <th>category_ID</th>
+          <th>category_NAME</th>
+          <th>Action</th>
+        </tr>
+        
+        <% for (var i = 0; i < categories.length; i++) { %>
+        <tr>
+            <td><%= categories[i].category_id %></td>
+            <td><%= categories[i].category_name %></td>
+            <td>
+                <a href="http://localhost:5500/categories/update/<%= categories[i].category_id %>">Edit</a>
+                <a href="http://localhost:5500/categories/delete/<%= categories[i].category_id %>">Delete</a>
+            </td>
+        </tr>
+        <% } %> 
+    </table>
+    <a href="http://localhost:5500/categories">Back</a>
+</body>
+</html>

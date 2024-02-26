@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href= "../../css/style.css">
+
+</head>
+<body>
+    <table>
+        <tr>
+          <th>product_id </th>
+          <th>product_code</th>
+          <th>product_name</th>
+          <th>category_id</th>
+          <th>Action</th>
+        </tr>
+        
+        <tr>
+            <td><%= product.product_id  %></td>
+            <td><%= product.product_code  %></td>
+            <td><%= product.product_name  %></td>
+            <td><%= product.category_id  %></td>
+          <td>
+            <a href="http://localhost:5500/product/update/<%= product.product_id %>">Edit</a>
+            <a href="http://localhost:5500/product/delete/<%= product.product_id %>">Delete</a>
+          </td>
+        </tr>
+      </table>
+      <a href="http://localhost:5500/products">Back</a>
+
+</body>
+</html>

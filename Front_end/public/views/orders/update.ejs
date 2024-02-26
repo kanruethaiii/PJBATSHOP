@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <h1>UPDATE Order</h1>
+    <form method="post" action="/orders/update/<%= orders.orders_id %>">
+        <label for="orders_id">Order ID:</label>
+        <input type="text" id="orders_id" name="orders_id" value="<%= orders.orders_id %>">
+
+        <label for="products_id">Product ID:</label>
+        <input type="text" id="products_id" name="products_id" value="<%= orders.products_id %>">
+
+        <label for="user_id">User ID:</label>
+        <input type="text" id="user_id" name="user_id" value="<%= orders.user_id %>">
+
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

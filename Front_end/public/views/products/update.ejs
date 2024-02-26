@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "../../css/style.css">
+
+
+
+</head>
+<body>
+    <h1>UPDATE Product</h1>
+    <form method="post" action="/product/update/<%= product.product_id %>">
+        <label for="product_name">Product Name:</label>
+        <input type="text" id="product_name" name="product_name" value="<%= product.product_name %>">
+
+        <label for="product_code">Product Code:</label>
+        <input type="text" id="product_code" name="product_code"value="<%= product.product_code %>" >
+
+        <label for="category_id">Category id:</label>
+        <input type="text" id="category_id" name="category_id" value="<%= product.category_id %>">
+        
+        <label for="unit">unit :</label>
+        <input type="text" id="unit" name="unit" value="<%= product.unit %>">
+
+        <label for="price">price :</label>
+        <input type="text" id="price" name="price" value="<%= product.price %>">
+
+
+        <input type="submit" value="create">
+    </form>
+</body>
+</html>

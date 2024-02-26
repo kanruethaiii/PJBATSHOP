@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <h1>CREATE Order</h1>
+    <form method="post" action="/order/create">
+        <label for="orders_id">Order ID:</label>
+        <input type="text" id="orders_id" name="orders_id">
+
+        <label for="products_id">Product ID:</label>
+        <input type="text" id="products_id" name="products_id">
+
+        <label for="user_id">User ID:</label>
+        <input type="text" id="user_id" name="user_id">
+
+        <input type="submit" value="Create">
+    </form>
+</body>
+</html>
