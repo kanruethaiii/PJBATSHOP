@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>orders</title>
+    <title>Orders</title>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-
-<table>
-    <tr>
-        <th>Order ID</th>
-        <th>Product ID</th>
-        <th>User ID</th>
-        <th>Action</th>
-    </tr>
-    <% for(var i = 0; i < orders.length; i++) { %>
+    <table>
+        <tr>
+          <th>Order ID</th>
+          <th>Product ID</th>
+          <th>User ID</th>
+          <th>Action</th>
+        </tr>
+        
+        <% for (var i = 0; i < orders.length; i++) { %>
         <tr>
             <td><%= orders[i].orders_id %></td>
             <td><%= orders[i].products_id %></td>
@@ -26,8 +26,8 @@
                 <a href="http://localhost:5500/orders/delete/<%= orders[i].orders_id %>">Delete</a>
             </td>
         </tr>
-    <% } %> 
-</table>
-<a href="http://localhost:5500/order/create">Create</a>
+        <% } %> 
+    </table>
+    <a href="http://localhost:5500/orders">Back</a>
 </body>
 </html>

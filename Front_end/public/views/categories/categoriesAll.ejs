@@ -18,6 +18,7 @@
                 <td><%= categories[i].category_id %></td>
                 <td><%= categories[i].category_name %></td>
                 <td>
+                    <a href="http://localhost:5500/categories/<%= categories[i].category_id %>">View</a>
                     <a href="http://localhost:5500/categories/update/<%= categories[i].category_id %>">Edit</a>
                     <a href="http://localhost:5500/categories/delete/<%= categories[i].category_id %>">Delete</a>
                 </td>
