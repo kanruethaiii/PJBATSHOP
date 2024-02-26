@@ -274,8 +274,8 @@ app.get("/categorie/create", async (req, res) => {
 app.post('/categorie/create', async (req, res) => {
     try {
         const data = {
-            category_id: req.body.category_id,
-            category_name: req.body.category_name,
+            category_id: req.body.categories_id,
+            category_name: req.body.categories_name,
         };
         await axios.post(base_url + '/categories/', data); 
         res.redirect('/categories/');
@@ -296,7 +296,6 @@ app.get("/categories/update/:id", async (req, res) => {
 app.post("/categories/update/:id", async (req, res) => {
     try {
         const data = {
-            category_id: req.body.category_id,
             category_name: req.body.category_name,
         };
         await axios.put(base_url + '/categories/' + req.params.id, data); 
